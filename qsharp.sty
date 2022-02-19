@@ -1,0 +1,145 @@
+%%
+%% This is file `qsharp.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% qsharp.dtx  (with options: `package')
+%% 
+%% This is a generated file.
+%% 
+%% Copyright (C) 2018-2022 by Microsoft
+%% 
+%% This file may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either
+%% version 1.3 of this license or (at your option) any later
+%% version. The latest version of this license is in:
+%% 
+%%    http://www.latex-project.org/lppl.txt
+%% 
+%% and version 1.3 or later is part of all distributions of
+%% LaTeX version 2005/12/01 or later.
+%% 
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesPackage{qsharp}
+    [2019/08/27 v0.9.1908.2701 Updated to 0.9 syntax.]
+
+
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+
+
+
+
+\newcommand*{\qs}{Q\#}
+
+
+
+
+\definecolor{cud-reddish-purple}{RGB}{204,121,167}
+\colorlet{doc-comment}{cud-reddish-purple!60!black}
+
+
+
+
+\makeatletter
+\lstdefinelanguage{QSharp}{
+    morekeywords={
+        namespace,
+        open,
+        as,
+        operation,
+        function,
+        newtype,
+        body,
+        adjoint,
+        auto,
+        distribute,
+        self,
+        invert,
+        intrinsic,
+        controlled,
+        let,
+        set,
+        if,
+        elif,
+        else,
+        repeat,
+        until,
+        fixup,
+        while,
+        return,
+        fail,
+        for,
+        in,
+        mutable,
+        using, use,
+        borrowing, borrow,
+        within,
+        apply,
+        is,
+        Adj,
+        Ctl,
+        Adjoint,
+        Controlled,
+        Qubit, Unit,
+        Int, BigInt,
+        Double,
+        Bool,
+        String,
+        Pauli, Result,
+        Range,
+        Zero, One,
+        true, false,
+        PauliI, PauliX, PauliY, PauliZ,
+        new,
+        not, and, or,
+    },
+    % Define built-in intrinsics as second-order keywords.
+    morekeywords=[2]{
+        H,
+        CNOT,
+        I,
+        X,
+        Y,
+        Z,
+        Message,
+        Assert,
+        AssertProb,
+        CCNOT,
+        Exp,
+        ExpFrac,
+        M,
+        Measure,
+        R,
+        R1,
+        R1Frac,
+        Random,
+        Reset,
+        ResetAll,
+        RFrac,
+        Rx,
+        Ry,
+        Rz,
+        S,SWAP,
+        T
+    },
+    sensitive=true,
+    morecomment=[l]{//},
+    morecomment=[l][\lst@commentstyle\color{doc-comment}]{///}
+}
+\makeatother
+
+
+\lstdefinestyle{QSharp}{
+    language=QSharp,
+    mathescape=true
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\endinput
+%%
+%% End of file `qsharp.sty'.

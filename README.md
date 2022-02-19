@@ -5,6 +5,14 @@ Maintained by Chris Granade (chgranad@microsoft.com).
 
 This package provides LaTeX syntax highlighting for Q#.
 
+## Usage ##
+
+Copy paste the shipped `qsharp.sty` file into your project and include it in your document using `\usepackage{qsharp}`.
+
+## Editing the Package ##
+
+Edit `qsharp.dtx` and issue `tex qsharp.ins` to regenerate `qsharp.sty`.
+
 ## Installing ##
 
 ### Install With PowerShell ###
